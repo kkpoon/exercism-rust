@@ -1,6 +1,6 @@
 extern crate chrono;
 use chrono::*;
 
-pub fn after(from_date: DateTime<UTC>) -> DateTime<UTC> {
+pub fn after<T: TimeZone>(from_date: DateTime<T>) -> DateTime<T> {
     from_date + Duration::seconds(1000000000)
 }
