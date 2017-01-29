@@ -1,7 +1,8 @@
-pub fn raindrops(n: u64) -> String {
-    let drops = (1..n + 1)
+pub fn raindrops(n: i32) -> String {
+    let drops = vec![3, 5, 7]
+        .iter()
         .filter(|&x| n % x == 0)
-        .map(|x| match x {
+        .map(|&x| match x {
             3 => "Pling",
             5 => "Plang",
             7 => "Plong",
